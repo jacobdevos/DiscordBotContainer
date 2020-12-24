@@ -1,5 +1,9 @@
-version: '1'
+version: '3.9'
 
 services:
-  OverwatchStats:
+  overwatchstats:
     build: './OverwatchStats'
+    ports:
+      - '5001:5000'
+  redis:
+    image: 'redis:alpine'
